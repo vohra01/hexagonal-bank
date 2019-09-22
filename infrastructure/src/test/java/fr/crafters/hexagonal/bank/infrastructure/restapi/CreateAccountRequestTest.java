@@ -14,13 +14,13 @@ public class CreateAccountRequestTest {
     public void should_convert_request_to_command() {
         // Given
         val birthday = new Date();
-        val request = new CreateAccountRequest("abachar", birthday);
+        val request = new CreateAccountRequest("Kunal", birthday);
 
         // When
         val command = request.toCommand();
 
         // Then
-        assertThat(command.getName()).isEqualTo("abachar");
+        assertThat(command.getName()).isEqualTo("Kunal");
         assertThat(command.getBirthday()).isEqualTo(birthday);
     }
 }

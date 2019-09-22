@@ -24,7 +24,7 @@ public class AccountServiceTest {
 
         // Given
         val birthday = new Date();
-        val command = new CreateAccountCommand("abachar", birthday);
+        val command = new CreateAccountCommand("Kunal", birthday);
 
         // When
         val createdId = service.create(command);
@@ -34,7 +34,7 @@ public class AccountServiceTest {
 
         val account = argumentCaptor.getValue();
         assertThat(account.getId()).isNull();
-        assertThat(account.getName()).isEqualTo("abachar");
+        assertThat(account.getName()).isEqualTo("Kunal");
         assertThat(account.getBirthday()).isEqualTo(birthday);
     }
 }
